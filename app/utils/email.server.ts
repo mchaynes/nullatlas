@@ -28,10 +28,10 @@ export async function sendEmail({
 	to: string
 	subject: string
 } & (
-	| { html: string; text: string; react?: never }
-	| { react: ReactElement; html?: never; text?: never }
-)) {
-	const from = 'hello@epicstack.dev'
+		| { html: string; text: string; react?: never }
+		| { react: ReactElement; html?: never; text?: never }
+	)) {
+	const from = 'hi@nullatlas.com'
 
 	const email = {
 		from,

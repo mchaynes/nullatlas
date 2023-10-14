@@ -7,7 +7,7 @@ import {
 } from '#app/components/ui/tooltip.tsx'
 import { logos, stars } from './logos/logos.ts'
 
-export const meta: MetaFunction = () => [{ title: 'Epic Notes' }]
+export const meta: MetaFunction = () => [{ title: 'Null Atlas' }]
 
 export default function Index() {
 	return (
@@ -23,9 +23,9 @@ export default function Index() {
 							<h1 className="text-center text-mega font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
 								<a
 									className="block uppercase text-white drop-shadow-md"
-									href="https://www.epicweb.dev/stack"
+									href="https://github.com/mchaynes/nullatlas"
 								>
-									<span>Epic Stack</span>
+									<span>Null Atlas</span>
 									<svg
 										className="mx-auto mt-2"
 										xmlns="http://www.w3.org/2000/svg"
@@ -42,14 +42,7 @@ export default function Index() {
 								</a>
 							</h1>
 							<p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
-								Check the{' '}
-								<a
-									className="underline"
-									href="https://github.com/epicweb-dev/epic-stack/blob/main/docs/getting-started.md"
-								>
-									Getting Started
-								</a>{' '}
-								guide file for how to get your project off the ground!
+								a geospatial search engine
 							</p>
 						</div>
 					</div>

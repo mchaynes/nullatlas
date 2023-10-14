@@ -105,26 +105,26 @@ export async function loader({ request }: DataFunctionArgs) {
 
 	const user = userId
 		? await time(
-				() =>
-					prisma.user.findUniqueOrThrow({
-						select: {
-							id: true,
-							name: true,
-							username: true,
-							image: { select: { id: true } },
-							roles: {
-								select: {
-									name: true,
-									permissions: {
-										select: { entity: true, action: true, access: true },
-									},
+			() =>
+				prisma.user.findUniqueOrThrow({
+					select: {
+						id: true,
+						name: true,
+						username: true,
+						image: { select: { id: true } },
+						roles: {
+							select: {
+								name: true,
+								permissions: {
+									select: { entity: true, action: true, access: true },
 								},
 							},
 						},
-						where: { id: userId },
-					}),
-				{ timings, type: 'find user', desc: 'find user in root' },
-		  )
+					},
+					where: { id: userId },
+				}),
+			{ timings, type: 'find user', desc: 'find user in root' },
+		)
 		: null
 	if (userId && !user) {
 		console.info('something weird happened')
@@ -245,11 +245,11 @@ function App() {
 				<header className="container py-6">
 					<nav className="flex items-center justify-between">
 						<Link to="/">
-							<div className="font-light">epic</div>
-							<div className="font-bold">notes</div>
+							<div className="font-light">null</div>
+							<div className="font-bold">atlas</div>
 						</Link>
 						{isOnSearchPage ? null : (
-							<div className="ml-auto max-w-sm flex-1 pr-10">
+							<div className="ml-auto max-w-xl flex-1 pr-10">
 								<SearchBar status="idle" />
 							</div>
 						)}
@@ -271,8 +271,8 @@ function App() {
 
 				<div className="container flex justify-between pb-5">
 					<Link to="/">
-						<div className="font-light">epic</div>
-						<div className="font-bold">notes</div>
+						<div className="font-light">null</div>
+						<div className="font-bold">atlas</div>
 					</Link>
 					<ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
 				</div>

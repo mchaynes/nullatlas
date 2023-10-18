@@ -1,9 +1,9 @@
-import { useUser } from "#app/utils/user.ts"
 import { Form, Link, useSubmit } from "@remix-run/react"
 import { useRef } from "react"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuPortal, DropdownMenuTrigger } from "./ui/dropdown-menu.tsx"
-import { Button } from "./ui/button.tsx"
 import { getUserImgSrc } from "#app/utils/misc.tsx"
+import { useUser } from "#app/utils/user.ts"
+import { Button } from "./ui/button.tsx"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuPortal, DropdownMenuTrigger } from "./ui/dropdown-menu.tsx"
 import { Icon } from "./ui/icon.tsx"
 
 export function UserDropdown() {

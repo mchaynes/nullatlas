@@ -1,14 +1,6 @@
 import { type MetaFunction } from '@remix-run/node'
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipProvider,
-	TooltipTrigger,
-} from '#app/components/ui/tooltip.tsx'
-import { logos, stars } from './logos/logos.ts'
-import Map from '#app/components/map.client.tsx'
 import { ClientOnly } from 'remix-utils'
-import { useRef } from 'react'
+import Map from '#app/components/map.client.tsx'
 
 
 // let MapContainerMDE = lazy(async () => {
@@ -46,8 +38,7 @@ export default function Index() {
 					style={{ height: "100px", background: "black" }}
 				/>
 			}>
-				{() => <Map height={"50rem"}>
-				</Map>}
+				{() => <Map />}
 			</ClientOnly>
 		</main>
 	)

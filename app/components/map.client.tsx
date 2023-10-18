@@ -1,16 +1,14 @@
-import { MapContainer } from 'react-leaflet/MapContainer'
-import { TileLayer } from 'react-leaflet/TileLayer'
+import { type LatLngTuple } from "leaflet";
 import { FeatureLayer, BasemapLayer } from 'react-esri-leaflet'
+import { MapContainer } from 'react-leaflet/MapContainer'
 import { ZoomControl } from 'react-leaflet/ZoomControl'
-import { LayersControl } from 'react-leaflet/LayersControl'
 import globe from '#app/routes/_marketing+/logos/punk-rock.png'
 
 
-import type { LatLngTuple } from "leaflet";
-import { SearchBar } from './search-bar.tsx';
 import { UserDropdown } from './profile-dropdown.tsx';
+import { SearchBar } from './search-bar.tsx';
 
-export default function Map({ height, children }: { height: string, children: React.ReactNode }) {
+export default function Map() {
   const position: LatLngTuple = [51.505, -0.09];
 
   return (

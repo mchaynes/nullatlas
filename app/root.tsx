@@ -24,6 +24,7 @@ import {
 	useSubmit,
 } from '@remix-run/react'
 import { withSentry } from '@sentry/remix'
+import leafletStyleUrl from 'leaflet/dist/leaflet.css'
 import { useRef } from 'react'
 import { z } from 'zod'
 import { Confetti } from './components/confetti.tsx'
@@ -41,8 +42,8 @@ import {
 } from './components/ui/dropdown-menu.tsx'
 import { Icon, href as iconsHref } from './components/ui/icon.tsx'
 import fontStyleSheetUrl from './styles/font.css'
-import tailwindStyleSheetUrl from './styles/tailwind.css'
 import leafletExtensionUrl from './styles/leaflet-addons.css'
+import tailwindStyleSheetUrl from './styles/tailwind.css'
 import { authenticator, getUserId } from './utils/auth.server.ts'
 import { ClientHintCheck, getHints, useHints } from './utils/client-hints.tsx'
 import { getConfetti } from './utils/confetti.server.ts'
@@ -60,7 +61,6 @@ import { type Theme, setTheme, getTheme } from './utils/theme.server.ts'
 import { makeTimings, time } from './utils/timing.server.ts'
 import { getToast } from './utils/toast.server.ts'
 import { useOptionalUser, useUser } from './utils/user.ts'
-import leafletStyleUrl from 'leaflet/dist/leaflet.css'
 
 export const links: LinksFunction = () => {
 	return [

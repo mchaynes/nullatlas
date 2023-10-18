@@ -1,7 +1,6 @@
 import docker from './docker.png'
 import eslint from './eslint.svg'
 import fakerJS from './faker.svg'
-import fly from './fly.svg'
 import github from './github.svg'
 import msw from './msw.svg'
 import playwright from './playwright.svg'

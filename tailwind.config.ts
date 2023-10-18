@@ -1,9 +1,9 @@
 import { type Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors.js'
 import defaultTheme from 'tailwindcss/defaultTheme.js'
 import animatePlugin from 'tailwindcss-animate'
 import radixPlugin from 'tailwindcss-radix'
 import { extendedTheme } from './app/utils/extended-theme.ts'
-import colors from 'tailwindcss/colors.js'
 
 export default {
 	content: ['./app/**/*.{ts,tsx,jsx,js}'],

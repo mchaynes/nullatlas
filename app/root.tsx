@@ -42,6 +42,7 @@ import {
 import { Icon, href as iconsHref } from './components/ui/icon.tsx'
 import fontStyleSheetUrl from './styles/font.css'
 import tailwindStyleSheetUrl from './styles/tailwind.css'
+import leafletExtensionUrl from './styles/leaflet-addons.css'
 import { authenticator, getUserId } from './utils/auth.server.ts'
 import { ClientHintCheck, getHints, useHints } from './utils/client-hints.tsx'
 import { getConfetti } from './utils/confetti.server.ts'
@@ -59,6 +60,7 @@ import { type Theme, setTheme, getTheme } from './utils/theme.server.ts'
 import { makeTimings, time } from './utils/timing.server.ts'
 import { getToast } from './utils/toast.server.ts'
 import { useOptionalUser, useUser } from './utils/user.ts'
+import leafletStyleUrl from 'leaflet/dist/leaflet.css'
 
 export const links: LinksFunction = () => {
 	return [
@@ -67,6 +69,8 @@ export const links: LinksFunction = () => {
 		// Preload CSS as a resource to avoid render blocking
 		{ rel: 'preload', href: fontStyleSheetUrl, as: 'style' },
 		{ rel: 'preload', href: tailwindStyleSheetUrl, as: 'style' },
+		{ rel: 'stylesheet', href: leafletStyleUrl, as: 'style' },
+		{ rel: 'stylesheet', href: leafletExtensionUrl, as: 'style' },
 		cssBundleHref ? { rel: 'preload', href: cssBundleHref, as: 'style' } : null,
 		{ rel: 'mask-icon', href: '/favicons/mask-icon.svg' },
 		{
@@ -265,9 +269,7 @@ function App() {
 					</nav>
 				</header>
 
-				<div className="flex-1">
-					<Outlet />
-				</div>
+				<Outlet />
 
 				<div className="container flex justify-between pb-5">
 					<Link to="/">

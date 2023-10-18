@@ -145,11 +145,11 @@ async function seed() {
 	await prisma.user.create({
 		select: { id: true },
 		data: {
-			email: 'kody@kcd.dev',
-			username: 'kody',
-			name: 'Kody',
+			email: 'hi@myleshaynes.com',
+			username: 'myles',
+			name: 'Myles',
 			image: { create: kodyImages.kodyUser },
-			password: { create: createPassword('kodylovesyou') },
+			password: { create: createPassword('password123') },
 			connections: {
 				create: { providerName: 'github', providerId: githubUser.profile.id },
 			},

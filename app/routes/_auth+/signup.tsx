@@ -61,7 +61,7 @@ export async function action({ request }: DataFunctionArgs) {
 
 	const response = await sendEmail({
 		to: email,
-		subject: `Welcome to Epic Notes!`,
+		subject: `Welcome to Null Atlas`,
 		react: <SignupEmail onboardingUrl={verifyUrl.toString()} otp={otp} />,
 	})
 

@@ -3,11 +3,15 @@ import defaultTheme from 'tailwindcss/defaultTheme.js'
 import animatePlugin from 'tailwindcss-animate'
 import radixPlugin from 'tailwindcss-radix'
 import { extendedTheme } from './app/utils/extended-theme.ts'
+import colors from 'tailwindcss/colors.js'
 
 export default {
 	content: ['./app/**/*.{ts,tsx,jsx,js}'],
 	darkMode: 'class',
 	theme: {
+		colors: {
+			primary: colors.purple[900],
+		},
 		container: {
 			center: true,
 			padding: '2rem',

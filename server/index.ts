@@ -122,11 +122,11 @@ app.use(
 					"'self'",
 				].filter(Boolean),
 				'font-src': ["'self'"],
-				'frame-src': ["'self'"],
-				'img-src': ["'self'", 'data:'],
+				// 'frame-src': ["'self'"],
+				// 'img-src': ["'self'", 'data:'],
 				'script-src': [
 					"'strict-dynamic'",
-					"'self'",
+					// "'self'",
 					// @ts-expect-error
 					(_, res) => `'nonce-${res.locals.cspNonce}'`,
 				],
@@ -221,8 +221,8 @@ const server = app.listen(portToUse, () => {
 		desiredPort === portToUse
 			? desiredPort
 			: addy && typeof addy === 'object'
-			? addy.port
-			: 0
+				? addy.port
+				: 0
 
 	if (portUsed !== desiredPort) {
 		console.warn(

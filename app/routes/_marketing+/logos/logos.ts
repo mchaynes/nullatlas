@@ -28,11 +28,7 @@ export const logos = [
 		alt: 'Remix',
 		href: 'https://remix.run',
 	},
-	{
-		src: fly,
-		alt: 'Fly.io',
-		href: 'https://fly.io',
-	},
+
 	{
 		src: sqlite,
 		alt: 'SQLite',

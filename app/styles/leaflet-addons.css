@@ -1,0 +1,12 @@
+.leaflet-bar > a {
+  background-color: black;
+  color: white;
+}
+.leaflet-bar > a:hover {
+  background-color: darkgray;
+  color: white;
+}
+.leaflet-control {
+  background-color: black;
+  padding: 0.2rem;
+}

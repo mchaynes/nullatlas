@@ -31,6 +31,7 @@ import { Textarea } from '#app/components/ui/textarea.tsx'
 import { requireUserId } from '#app/utils/auth.server.ts'
 import { prisma } from '#app/utils/db.server.ts'
 import { cn, getNoteImgSrc } from '#app/utils/misc.tsx'
+import { ClientOnly } from 'remix-utils'
 
 const titleMinLength = 1
 const titleMaxLength = 100

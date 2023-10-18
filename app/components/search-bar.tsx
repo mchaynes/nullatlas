@@ -41,7 +41,7 @@ export function SearchBar({
 					name="search"
 					id="search"
 					defaultValue={searchParams.get('search') ?? ''}
-					placeholder="Search"
+					placeholder="Search for data"
 					className="w-full"
 					autoFocus={autoFocus}
 				/>
@@ -50,7 +50,7 @@ export function SearchBar({
 				<StatusButton
 					type="submit"
 					status={isSubmitting ? 'pending' : status}
-					className="flex w-full items-center justify-center"
+					className="flex w-full bg-violet-900 text-white items-center justify-center"
 					size="sm"
 				>
 					<Icon name="magnifying-glass" size="sm" />

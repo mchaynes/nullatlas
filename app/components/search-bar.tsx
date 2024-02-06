@@ -29,7 +29,7 @@ export function SearchBar({
 		<Form
 			method="GET"
 			action="/users"
-			className="flex flex-wrap items-center justify-center gap-2"
+			className="flex items-center justify-center gap-2"
 			onChange={e => autoSubmit && handleFormChange(e.currentTarget)}
 		>
 			<div className="flex-1">
@@ -41,19 +41,19 @@ export function SearchBar({
 					name="search"
 					id="search"
 					defaultValue={searchParams.get('search') ?? ''}
-					placeholder="Search for data"
+					placeholder="Search for datasets"
 					className="w-full"
 					autoFocus={autoFocus}
 				/>
 			</div>
-			<div>
+			<div className="bg-black text-black">
 				<StatusButton
 					type="submit"
 					status={isSubmitting ? 'pending' : status}
-					className="flex w-full bg-violet-900 text-white items-center justify-center"
+					className="items-center justify-center text-black bg-black"
 					size="sm"
 				>
-					<Icon name="magnifying-glass" size="sm" />
+					<Icon name="magnifying-glass" className="text-black bg-black" size="sm" />
 					<span className="sr-only">Search</span>
 				</StatusButton>
 			</div>

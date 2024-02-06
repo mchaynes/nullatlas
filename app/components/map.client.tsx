@@ -9,7 +9,7 @@ import { UserDropdown } from './profile-dropdown.tsx';
 import { SearchBar } from './search-bar.tsx';
 
 export default function Map() {
-  const position: LatLngTuple = [51.505, -0.09];
+  const position: LatLngTuple = [7.685561555418314, 80.72112268919612];
 
   return (
     <>
@@ -19,7 +19,7 @@ export default function Map() {
           position: "absolute",
         }}
         center={position}
-        zoom={13}
+        zoom={7}
         zoomControl={false}
       >
         <ZoomControl position='bottomright' />
@@ -30,9 +30,9 @@ export default function Map() {
       </MapContainer>
       <div className="absolute top-0 left-0 h-[50rem] p-0 m-0 z-[10000] w-full pointer-events-none">
         <div className="w-full flex flex-col justify-center p-10">
-          <div className="w-2/3 flex flex-row justify-between self-center pointer-events-auto">
-            <div className="rounded-xl bg-black p-1">
-              <img src={globe} width={"60px"} height={"60px"} />
+          <div className="w-3/4 flex flex-row justify-between self-center pointer-events-auto">
+            <div className="bg-black mb-1">
+              <img src={globe} alt={"NullAtlas Globe"} width={"60px"} height={"60px"} />
             </div>
             <div className="w-2/3">
               <SearchBar status="idle" />
